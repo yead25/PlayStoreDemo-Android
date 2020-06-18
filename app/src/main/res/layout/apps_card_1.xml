@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:layout_margin="10dp"
 
-    android:layout_margin="10dp">
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:id="@+id/card_app"
         android:layout_centerHorizontal="true"
         app:cardCornerRadius="20dp">
 
@@ -21,10 +21,10 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/tom"
-             />
+            android:src="@drawable/tom" />
 
     </androidx.cardview.widget.CardView>
+
     <TextView
 
         android:id="@+id/apps_name"
@@ -32,9 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/card_app"
         android:text="Tom and Jerry"
-        android:textSize="15dp"
         android:textColor="@android:color/black"
-        />
+        android:textSize="15dp" />
+
     <TextView
 
         android:id="@+id/apps_size"
@@ -43,8 +43,7 @@
         android:layout_below="@+id/apps_name"
 
         android:text="10"
-        android:textSize="10dp"
         android:textColor="@android:color/darker_gray"
-        />
+        android:textSize="10dp" />
 
 </LinearLayout>

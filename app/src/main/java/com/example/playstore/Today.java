@@ -28,7 +28,7 @@ public class Today extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_today,container,false);
+        View v = inflater.inflate(R.layout.fragment_today, container, false);
 
         HandleJSON handleJSON = new HandleJSON(getContext());
         arrayList = handleJSON.getTodayItem();
@@ -47,28 +47,24 @@ public class Today extends Fragment {
         today_recycler.setLayoutManager(today_LayoutManager);
         today_recycler.setAdapter(today_adapter);
 
-        date= v.findViewById(R.id.date_view);
+        date = v.findViewById(R.id.date_view);
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
-        currentDate= getdate(currentDate).toUpperCase();
+        currentDate = getdate(currentDate).toUpperCase();
         date.setText(currentDate);
 
         return v;
     }
 
 
-
-
-   private String getdate(String date)
-    {
-        String ret="";
-        int space=0;
-        for(int i=0;i<date.length();i++)
-        {
-            if(date.charAt(i)==' ')space++;
-            if(date.charAt(i)==',')continue;
-            if(space==3)break;
-            ret+=date.charAt(i);
+    private String getdate(String date) {
+        String ret = "";
+        int space = 0;
+        for (int i = 0; i < date.length(); i++) {
+            if (date.charAt(i) == ' ') space++;
+            if (date.charAt(i) == ',') continue;
+            if (space == 3) break;
+            ret += date.charAt(i);
         }
         return ret;
     }

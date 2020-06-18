@@ -20,10 +20,11 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
 
         ImageView largeImageView;
         ImageView smallImageView;
-        TextView small,large,large2;
+        TextView small, large, large2;
+
         public GameViewHolder(@NonNull View itemView) {
             super(itemView);
-            largeImageView= itemView.findViewById(R.id.big_image);
+            largeImageView = itemView.findViewById(R.id.big_image);
             smallImageView = itemView.findViewById(R.id.small_image);
             small = itemView.findViewById(R.id.small_text);
             large = itemView.findViewById(R.id.large_text);
@@ -33,13 +34,13 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.GameViewHolder
     }
 
     public GameAdapter(ArrayList<Today_item> apps_items) {
-        items=apps_items;
+        items = apps_items;
     }
 
     @NonNull
     @Override
     public GameViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.game_card,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.game_card, parent, false);
         GameViewHolder gameViewHolder = new GameViewHolder(view);
         return gameViewHolder;
 

@@ -11,33 +11,34 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class TodayAdapter extends RecyclerView.Adapter <TodayAdapter.TodayViewHolder>{
+public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.TodayViewHolder> {
 
     public ArrayList<Today_item> items;
-    public  TodayAdapter (ArrayList<Today_item> today_items)
-    {
+
+    public TodayAdapter(ArrayList<Today_item> today_items) {
         items = today_items;
     }
+
     public class TodayViewHolder extends RecyclerView.ViewHolder {
         public ImageView todayImagview;
         public TextView todayShortText;
         public TextView todayLongText;
-        public  TextView todayDiscription;
+        public TextView todayDiscription;
 
 
         public TodayViewHolder(@NonNull View itemView) {
             super(itemView);
-            todayImagview   = itemView.findViewById(R.id.tody_card_image);
-            todayShortText  = itemView.findViewById(R.id.tody_card_short);
-            todayLongText   = itemView.findViewById(R.id.tody_card_long);
-            todayDiscription    = itemView.findViewById(R.id.tody_card_discriptiom);
+            todayImagview = itemView.findViewById(R.id.tody_card_image);
+            todayShortText = itemView.findViewById(R.id.tody_card_short);
+            todayLongText = itemView.findViewById(R.id.tody_card_long);
+            todayDiscription = itemView.findViewById(R.id.tody_card_discriptiom);
         }
     }
 
     @NonNull
     @Override
     public TodayViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.today_card,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.today_card, parent, false);
         TodayViewHolder todayViewHolder = new TodayViewHolder(view);
         return todayViewHolder;
     }

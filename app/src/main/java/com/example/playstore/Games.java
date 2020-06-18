@@ -19,10 +19,10 @@ import java.util.zip.CheckedOutputStream;
 
 public class Games extends Fragment {
 
-    ArrayList<Apps_item> arrayList,arrayList2,arrayList3;
+    ArrayList<Apps_item> arrayList, arrayList2, arrayList3;
     RecyclerView recyclerView1, recyclerView2, recyclerView3;
-    RecyclerView.LayoutManager layoutManager1, layoutManager2,layoutManager3;
-    RecyclerView.Adapter adapter1, adapter2,adapter3;
+    RecyclerView.LayoutManager layoutManager1, layoutManager2, layoutManager3;
+    RecyclerView.Adapter adapter1, adapter2, adapter3;
     private GamesListener listener;
 
 
@@ -54,21 +54,13 @@ public class Games extends Fragment {
         recyclerView1.setLayoutManager(layoutManager1);
         recyclerView2.setLayoutManager(layoutManager2);
         recyclerView3.setLayoutManager(layoutManager3);
-        HandleJSON handleJSON = new HandleJSON(getContext()) ;
+        HandleJSON handleJSON = new HandleJSON(getContext());
 
         ArrayList<Today_item> arrayList1 = handleJSON.getGameForYou1Item();
         arrayList2 = handleJSON.getGameForYou2Item();
         arrayList3 = handleJSON.getGameForYou3Item();
 
-        /*arrayList.add(new Apps_item(R.drawable.tom1, "Tom and  Jerry 1", 10));
-        arrayList.add(new Apps_item(R.drawable.tom2, "Tom and  Jerry 2", 20));
-        arrayList.add(new Apps_item(R.drawable.tom3, "Tom and  Jerry 3", 30));
-        arrayList.add(new Apps_item(R.drawable.tom1, "Tom and  Jerry 1", 10));
-        arrayList.add(new Apps_item(R.drawable.tom2, "Tom and  Jerry 2", 20));
-        arrayList.add(new Apps_item(R.drawable.tom3, "Tom and  Jerry 3", 30));
-        arrayList.add(new Apps_item(R.drawable.tom1, "Tom and  Jerry 1", 10));
-        arrayList.add(new Apps_item(R.drawable.tom2, "Tom and  Jerry 2", 20));
-        arrayList.add(new Apps_item(R.drawable.tom3, "Tom and  Jerry 3", 30));*/
+
 
         adapter1 = new GameAdapter(arrayList1);
         adapter2 = new AppAdapter(arrayList2);
@@ -77,8 +69,10 @@ public class Games extends Fragment {
         recyclerView1.setAdapter(adapter1);
         recyclerView2.setAdapter(adapter2);
         recyclerView3.setAdapter(adapter3);
+
         button.setBackgroundColor(getResources().getColor(R.color.Button_change));
         button.setTextColor(getResources().getColor(R.color.text_change));
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

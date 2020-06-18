@@ -20,9 +20,9 @@ import java.util.ArrayList;
 public class Games2 extends Fragment {
 
 
-    ArrayList<Apps_item> arrayList1,arrayList2,arrayList3;
+    ArrayList<Apps_item> arrayList1, arrayList2, arrayList3;
     RecyclerView recyclerView1, recyclerView2, recyclerView3;
-    RecyclerView.Adapter adapter,adapter2,adapter3;
+    RecyclerView.Adapter adapter, adapter2, adapter3;
     RecyclerView.LayoutManager layoutManager1, layoutManager2, layoutManager3;
 
 
@@ -55,9 +55,10 @@ public class Games2 extends Fragment {
         layoutManager3 = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
 
         HandleJSON handleJSON = new HandleJSON(getContext());
-        arrayList1   = handleJSON.getGameSuggestedItem();
-        arrayList2  = handleJSON.getGameNonStopItem();
+        arrayList1 = handleJSON.getGameSuggestedItem();
+        arrayList2 = handleJSON.getGameNonStopItem();
         arrayList3 = handleJSON.getGameSpotLightItem();
+
      /* arrayList.add(new Apps_item(R.drawable.tom1,"Tom and  Jerry 1",10 ));
         arrayList.add(new Apps_item(R.drawable.tom2,"Tom and  Jerry 2",20));
         arrayList.add(new Apps_item(R.drawable.tom3,"Tom and  Jerry 3",30 ));
@@ -70,7 +71,7 @@ public class Games2 extends Fragment {
 
         adapter = new AppAdapter(arrayList1);
         adapter2 = new AppAdapter(arrayList2);
-        adapter3= new AppAdapter(arrayList3);
+        adapter3 = new AppAdapter(arrayList3);
 
         recyclerView1.setLayoutManager(layoutManager1);
         recyclerView2.setLayoutManager(layoutManager2);
@@ -81,7 +82,7 @@ public class Games2 extends Fragment {
         recyclerView3.setAdapter(adapter3);
 
         button2.setBackgroundColor(getResources().getColor(R.color.Button_change));
-       button2.setTextColor(getResources().getColor(R.color.text_change));
+        button2.setTextColor(getResources().getColor(R.color.text_change));
 
 
         button.setOnClickListener(new View.OnClickListener() {

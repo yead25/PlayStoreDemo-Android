@@ -9,10 +9,9 @@
         android:id="@+id/card1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        app:cardCornerRadius="10dp"
-        >
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="10dp">
 
         <ImageView
             android:id="@+id/big_image"
@@ -27,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/card1"
-        android:layout_marginTop="10dp"
         android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="10dp">
 
         <ImageView
@@ -44,13 +43,12 @@
         android:id="@+id/small_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/card2"
         android:layout_below="@+id/card1"
-        android:text="Mobile Game"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:textSize="10dp"
-        />
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/card2"
+        android:text="Mobile Game"
+        android:textSize="10dp" />
 
     <TextView
         android:id="@+id/large_text"
@@ -62,16 +60,16 @@
         android:text="Tom and Jerry"
         android:textColor="@android:color/black"
         android:textSize="15dp" />
+
     <TextView
         android:id="@+id/large_text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/card2"
         android:layout_below="@id/large_text"
-        android:text="Feel the power of epic SuperHero"
-        android:textSize="13dp"
         android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/card2"
+        android:text="Feel the power of epic SuperHero"
         android:textColor="@android:color/black"
-        />
+        android:textSize="13dp" />
 
 </RelativeLayout>

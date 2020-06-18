@@ -16,10 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class Apps extends Fragment {
-    ArrayList<Apps_item> arrayList,arrayList2;
-    RecyclerView recyclerView1,recyclerView2;
+    ArrayList<Apps_item> arrayList, arrayList2;
+    RecyclerView recyclerView1, recyclerView2;
     RecyclerView.LayoutManager layoutManager;
-    RecyclerView.Adapter adapter1,adapter2;
+    RecyclerView.Adapter adapter1, adapter2;
 
     @Nullable
     @Override
@@ -44,13 +44,18 @@ public class Apps extends Fragment {
         recyclerView2 = v.findViewById(R.id.apps_recycler_2);
 
         recyclerView1.setHasFixedSize(true);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),3,GridLayoutManager.HORIZONTAL,false);
-        layoutManager = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
+        recyclerView2.setHasFixedSize(true);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3, GridLayoutManager.HORIZONTAL, false);
+        layoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+
         adapter1 = new AppAdapter(arrayList);
         adapter2 = new AppsAdapter2(arrayList2);
+
         recyclerView1.setLayoutManager(layoutManager);
         recyclerView1.setAdapter(adapter1);
-        recyclerView2.setHasFixedSize(true);
+
+
         recyclerView2.setLayoutManager(gridLayoutManager);
         recyclerView2.setAdapter(adapter2);
 

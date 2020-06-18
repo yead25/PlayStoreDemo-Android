@@ -44,13 +44,12 @@ public class AppsAdapter2 extends RecyclerView.Adapter<AppsAdapter2.AppViewHolde
     }
 
 
-
     @Override
     public void onBindViewHolder(@NonNull AppViewHolder holder, int position) {
         Apps_item now = items.get(position);
-        holder.appImageView.setImageResource(now. getAppImage());
+        holder.appImageView.setImageResource(now.getAppImage());
         holder.appNameView.setText(now.getAppName());
-        holder.appSizeView.setText(""+now.getAppSize()+"MB");
+        holder.appSizeView.setText("" + now.getAppSize() + "MB");
     }
 
     @Override

@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements Games.GamesListener , Games2.Games2Listener {
+public class MainActivity extends AppCompatActivity implements Games.GamesListener, Games2.Games2Listener {
 
     private static String TAG = "here";
     TextView textView;
@@ -65,23 +65,20 @@ public class MainActivity extends AppCompatActivity implements Games.GamesListen
 
     @Override
     public void onGameClick(String input) {
-        if(input=="one") {
+        if (input == "one") {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new Games()).commit();
-        }
-        else if(input == "two") {
+        } else if (input == "two") {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new Games2()).commit();
         }
-
 
 
     }
 
     @Override
     public void onGame2Click(String input) {
-        if(input=="one") {
+        if (input == "one") {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new Games()).commit();
-        }
-        else if(input == "two") {
+        } else if (input == "two") {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new Games2()).commit();
         }
     }
